@@ -140,7 +140,7 @@ hr {
     font-size: var(--title-size);
     color: var(--bg-color);
     text-shadow: 1px 1px 1px rgb(255, 251, 43);
-    list-style-image: url(/assets/image_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg);
+    list-style-image: url(assets/pictures.svg);
 }
 
 li {
