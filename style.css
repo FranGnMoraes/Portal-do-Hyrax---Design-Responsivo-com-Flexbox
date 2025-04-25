@@ -140,7 +140,7 @@ hr {
     font-size: var(--title-size);
     color: var(--bg-color);
     text-shadow: 1px 1px 1px rgb(255, 251, 43);
-    list-style-image: url(assets/pictures.svg);
+    list-style-image: url(https://FranGnMoraes.github.io/Portal-do-Hyrax---Design-Responsivo-com-Flexbox/assets/pictures.svg);
 }
 
 li {
