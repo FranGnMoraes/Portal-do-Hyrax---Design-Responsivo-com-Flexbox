@@ -186,6 +186,117 @@ li {
     }
 }
 
+.section-formulario {
+    min-height: 100vh;
+    line-height: 30px;
+    padding: 2rem;
+
+    font-family: var(--title-font);
+    font-weight: var(--title-weight);
+    font-style: var(--title-style);
+    letter-spacing: var(--title-spacing);
+    font-size: var(--title-size);
+    color: var(--bg-color);
+
+    scroll-margin-top: 90px;
+}
+
+.formulario-grid {
+    display: grid;
+    grid-template-areas:
+        "contato cadastro";
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.form-contato {
+    grid-area: contato;
+    background: #f7f7f7;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.form-cadastro {
+    grid-area: cadastro;
+    background: #f7f7f7;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+form fieldset {
+    border: none;
+    display: grid;
+    gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .formulario-grid {
+        grid-template-areas:
+            "contato"
+            "cadastro";
+        grid-template-columns: 1fr;
+    }
+}
+
+.section-memes {
+    min-height: 100vh;
+    line-height: 30px;
+
+    padding: 2rem;
+    background-color: #ffffff;
+    scroll-margin-top: 90px;
+}
+
+.galeria {
+    display: grid;
+    grid-template-areas:
+        "img1 img2"
+        "img1 img3"
+        "img4 img5";
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.img1 {
+    grid-area: img1;
+}
+
+.img2 {
+    grid-area: img2;
+}
+
+.img3 {
+    grid-area: img3;
+}
+
+.img4 {
+    grid-area: img4;
+}
+
+.img5 {
+    grid-area: img5;
+}
+
+.galeria img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    aspect-ratio: 4 / 3;
+}
+
+@media (max-width: 768px) {
+    .galeria {
+        grid-template-areas:
+            "img1"
+            "img2"
+            "img3"
+            "img4"
+            "img5";
+        grid-template-columns: 1fr;
+    }
+}
 
 footer {
     width: 100%;

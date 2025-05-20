@@ -10,6 +10,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Portal dedicado aos Hyraxes com design responsivo usando Flexbox e CSS Grid.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Open Graph (Facebook, WhatsApp, etc.) -->
+    <meta property="og:title" content="Portal do Hyrax">
+    <meta property="og:description" content="Explore o mundo dos Hyraxes em um site feito com Flexbox e Grid!">
+    <meta property="og:image"
+        content="https://frangnmoraes.github.io/Portal-do-Hyrax---Design-Responsivo-com-Flexbox/assets/logo.png">
+    <meta property="og:url" content="https://frangnmoraes.github.io/Portal-do-Hyrax---Design-Responsivo-com-Flexbox/">
+    <meta name="twitter:card" content="summary_large_image">
 
 </head>
 
@@ -23,6 +33,8 @@
     <nav class="menu">
         <a href="#section-1">Perfil</a>
         <a href="#section-2">Vida</a>
+        <a href="#section-formulario">Formulário</a>
+        <a href="#section-memes">Memes</a>
     </nav>
 
     <div class="img-bg">
@@ -175,9 +187,79 @@
                     <li>Formam laços sociais tão complexos que reconhecem amigos dos amigos.</li>
                     <li>Suas vocalizações são estudadas por cientistas para entender comunicação e identidade sonora em
                         mamíferos.</li>
+                    <br>
                 </ul>
 
+                <hr>
+                <br>
 
+            </section>
+
+            <section id="section-formulario" class="section-formulario">
+                <h2>📋 Contato & Cadastro</h2>
+                <div class="form-grid">
+                    <form>
+                        <fieldset>
+                            <legend>Formulário de Contato</legend>
+                            <label for="nome">Nome:</label>
+                            <input type="text" id="nome" required>
+
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" required>
+
+                            <label for="data">Data de nascimento:</label>
+                            <input type="date" id="data">
+
+                            <label for="mensagem">Mensagem:</label>
+                            <textarea id="mensagem"></textarea>
+
+                            <label for="genero">Gênero:</label>
+                            <select id="genero">
+                                <option>Feminino</option>
+                                <option>Masculino</option>
+                                <option>Outro</option>
+                            </select>
+
+                            <input type="submit" value="Enviar">
+                            <hr>
+                            <br>
+                        </fieldset>
+                    </form>
+
+                    <form>
+                        <fieldset>
+                            <legend>Formulário de Cadastro</legend>
+                            <label for="user">Usuário:</label>
+                            <input type="text" id="user" required>
+
+                            <label for="senha">Senha:</label>
+                            <input type="password" id="senha" required>
+
+                            <label for="telefone">Telefone:</label>
+                            <input type="tel" id="telefone">
+
+                            <label for="cor">Cor favorita:</label>
+                            <input type="color" id="cor">
+
+                            <label for="arquivo">Foto de perfil:</label>
+                            <input type="file" id="arquivo">
+
+                            <input type="submit" value="Enviar">
+                            <hr>
+                        </fieldset>
+                    </form>
+                </div>
+            </section>
+
+            <section class="section-memes" id="section-memes">
+                <h2>Os melhores memes:</h2>
+                <div class="galeria">
+                    <img src="assets/justagirl.png" alt="Foto 1" class="img1">
+                    <img src="assets/anime.jpg" alt="Foto 2" class="img2">
+                    <img src="assets/nobraincell.png" alt="Foto 3" class="img3">
+                    <img src="assets/dog.png" alt="Foto 4" class="img4">
+                    <img src="assets/fairy.jpg" alt="Foto 5" class="img5">
+                </div>
             </section>
 
         </div>
