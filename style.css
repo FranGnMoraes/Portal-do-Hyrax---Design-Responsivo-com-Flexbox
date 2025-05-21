@@ -216,14 +216,12 @@ li {
 .form-contato {
     grid-area: contato;
     background: #f7f7f7;
-    padding: 1rem;
     border-radius: 10px;
 }
 
 .form-cadastro {
     grid-area: cadastro;
     background: #f7f7f7;
-    padding: 1rem;
     border-radius: 10px;
 }
 
