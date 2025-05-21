@@ -241,6 +241,11 @@ button {
 }
 
 @media (max-width: 600px) {
+    .section-formulario {
+        padding: 0;
+        margin: 0;
+    }
+
     .formulario-grid {
         grid-template-areas:
             "contato"
