@@ -206,7 +206,7 @@ li {
 .formulario-grid {
     display: grid;
     grid-template-areas:
-        "contato . cadastro";
+        "contato cadastro";
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     width: 100%;
