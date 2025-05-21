@@ -189,6 +189,8 @@ li {
 .section-formulario {
     min-height: 100vh;
     line-height: 30px;
+    width: 100%;
+    max-width: 100vw;
     padding: 2rem;
 
     font-family: var(--title-font);
@@ -207,6 +209,8 @@ li {
         "contato cadastro";
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
+    width: 100%;
+    max-width: 100vw;
 }
 
 .form-contato {
@@ -230,11 +234,16 @@ form fieldset {
 }
 
 @media (max-width: 768px) {
+    .section-formulario {
+        padding: 1rem;
+    }
+
     .formulario-grid {
         grid-template-areas:
             "contato"
             "cadastro";
         grid-template-columns: 1fr;
+        gap: 1rem;
     }
 }
 
