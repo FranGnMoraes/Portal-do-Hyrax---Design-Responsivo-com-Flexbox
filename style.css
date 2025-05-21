@@ -210,7 +210,7 @@ li {
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     width: 100%;
-    max-width: 100vw;
+    max-width: 600px;
 }
 
 .form-contato {
@@ -231,6 +231,15 @@ form fieldset {
     border: none;
     display: grid;
     gap: 0.5rem;
+}
+
+input,
+textarea,
+select,
+button {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 @media (max-width: 600px) {
