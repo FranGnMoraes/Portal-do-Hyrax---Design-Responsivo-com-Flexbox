@@ -241,16 +241,11 @@ button {
 }
 
 @media (max-width: 600px) {
-    .section-formulario {
-        padding: 1rem;
-    }
-
     .formulario-grid {
         grid-template-areas:
             "contato"
             "cadastro";
         grid-template-columns: 1fr;
-        gap: 1rem;
     }
 }
 
