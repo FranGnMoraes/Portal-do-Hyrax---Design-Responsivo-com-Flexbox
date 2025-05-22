@@ -16,10 +16,6 @@
 
 }
 
-.metatags {
-    background-color: var(--bg-color);
-}
-
 
 h2 {
     font-family: var(--title-font);
@@ -96,6 +92,7 @@ p {
     height: 500px;
     object-fit: cover;
     padding-top: 108px;
+    display: block;
 }
 
 .section-1 {
