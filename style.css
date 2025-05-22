@@ -16,6 +16,10 @@
 
 }
 
+.metatags {
+    background-color: var(--bg-color);
+}
+
 
 h2 {
     font-family: var(--title-font);
