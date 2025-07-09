@@ -13,25 +13,24 @@
     --title-style: normal;
     --title-spacing: 1px;
     --title-size: 40px;
-
 }
-
 
 h1 {
     font-family: var(--title-font);
     font-weight: var(--title-weight);
     font-style: var(--title-style);
     text-align: center;
-
     letter-spacing: var(--title-spacing);
     font-size: var(--title-size);
     color: var(--bg-color);
     text-shadow: 1px 1px 1px rgb(255, 251, 43);
+    margin: 20px 0;
+    /* Espaçamento aprimorado */
 }
 
 h2 {
-    padding: 30px 0 10px 0;
-    text-decoration: none;
+    padding: 20px 0 10px 0;
+    /* Espaçamento aprimorado */
     font-weight: bold;
     color: black;
 }
@@ -41,10 +40,9 @@ header nav {
     width: 100%;
     background: var(--bg-color);
     position: fixed;
-    left: 0px;
-    top: 0px;
+    left: 0;
+    top: 0;
     display: flex;
-    flex-flow: row nowrap;
     align-items: center;
     justify-content: flex-start;
     padding: 5px 5px 5px 8%;
@@ -71,12 +69,10 @@ header nav {
     color: black;
     text-decoration: none;
     font-weight: bold;
-    cursor: pointer;
 }
 
 .menu a:hover {
     color: var(--bg-color);
-    cursor: pointer;
 }
 
 .container {
@@ -92,15 +88,27 @@ p {
     height: 500px;
     object-fit: cover;
     padding-top: 108px;
-    display: block;
 }
 
-.section-1 {
+.section-1,
+.section-2,
+.section-formulario,
+.section-memes {
     min-height: 100vh;
-    display: block;
     line-height: 30px;
+    scroll-margin-top: 90px;
+    animation: fadeIn 1s ease-in;
+    /* Animação de entrada */
+}
 
-    scroll-margin-top: 120px;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .section-1 .div-pictures {
@@ -121,16 +129,6 @@ p {
 hr {
     border: 10px var(--bg-color);
     border-style: dashed;
-
-}
-
-.section-2 {
-    min-height: 100vh;
-    padding: 50px 0 80px 0;
-    display: block;
-    line-height: 30px;
-
-    scroll-margin-top: 70px;
 }
 
 .div-pictures ul li {
@@ -156,17 +154,20 @@ li {
     padding: 20px;
 }
 
-
 .box figure {
     width: calc(33.333% - 20px);
     aspect-ratio: 1/1;
     background-color: #eee;
     overflow: hidden;
-    border-radius: 10px;
-    margin: 0;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    /* Efeito de transição */
+}
 
+.box figure:hover {
+    transform: scale(1.05);
+    /* Aumenta a imagem ao passar o mouse */
 }
 
 .box figure img {
@@ -188,40 +189,26 @@ li {
 }
 
 .section-formulario {
-    min-height: 100vh;
-    line-height: 30px;
-    width: 100%;
-    max-width: 100vw;
     padding: 2rem;
-
     font-family: var(--title-font);
     font-weight: var(--title-weight);
     font-style: var(--title-style);
     letter-spacing: var(--title-spacing);
     font-size: var(--title-size);
     color: var(--bg-color);
-
-    scroll-margin-top: 90px;
 }
 
 .formulario-grid {
     display: grid;
-    grid-template-areas:
-        "contato cadastro";
+    grid-template-areas: "contato cadastro";
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     width: 100%;
     max-width: 600px;
 }
 
-.form-contato {
-    grid-area: contato;
-    background: #f7f7f7;
-    border-radius: 10px;
-}
-
+.form-contato,
 .form-cadastro {
-    grid-area: cadastro;
     background: #f7f7f7;
     border-radius: 10px;
 }
@@ -237,7 +224,6 @@ textarea,
 select,
 button {
     width: 100%;
-    max-width: 100%;
     box-sizing: border-box;
 }
 
@@ -248,50 +234,21 @@ button {
     }
 
     .formulario-grid {
-        grid-template-areas:
-            "contato"
-            "cadastro";
+        grid-template-areas: "contato" "cadastro";
         grid-template-columns: 1fr;
     }
 }
 
 .section-memes {
-    min-height: 100vh;
-    line-height: 30px;
-
     padding: 2rem;
     background-color: #ffffff;
-    scroll-margin-top: 90px;
 }
 
 .galeria {
     display: grid;
-    grid-template-areas:
-        "img1 img2"
-        "img1 img3"
-        "img4 img5";
+    grid-template-areas: "img1 img2" "img1 img3" "img4 img5";
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
-}
-
-.img1 {
-    grid-area: img1;
-}
-
-.img2 {
-    grid-area: img2;
-}
-
-.img3 {
-    grid-area: img3;
-}
-
-.img4 {
-    grid-area: img4;
-}
-
-.img5 {
-    grid-area: img5;
 }
 
 .galeria img {
@@ -301,16 +258,18 @@ button {
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     aspect-ratio: 4 / 3;
+    transition: transform 0.3s;
+    /* Efeito de transição */
+}
+
+.galeria img:hover {
+    transform: scale(1.05);
+    /* Aumenta a imagem ao passar o mouse */
 }
 
 @media (max-width: 768px) {
     .galeria {
-        grid-template-areas:
-            "img1"
-            "img2"
-            "img3"
-            "img4"
-            "img5";
+        grid-template-areas: "img1" "img2" "img3" "img4" "img5";
         grid-template-columns: 1fr;
     }
 }

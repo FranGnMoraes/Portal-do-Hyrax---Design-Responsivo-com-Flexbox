@@ -8,50 +8,59 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <meta name="description" content="Portal dedicado aos Hyraxes com design responsivo usando Flexbox e CSS Grid.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Open Graph (Facebook, WhatsApp, etc.) -->
-    <meta property="og:title" content="Portal do Hyrax">
-    <meta property="og:description" content="Explore o mundo dos Hyraxes em um site feito com Flexbox e Grid!">
-    <meta property="og:image"
-        content="https://raw.githubusercontent.com/FranGnMoraes/Portal-do-Hyrax---Design-Responsivo-com-Flexbox/refs/heads/main/assets/logometatag.png">
-    <meta property="og:url" content="https://frangnmoraes.github.io/Portal-do-Hyrax---Design-Responsivo-com-Flexbox/">
-    <meta name="twitter:card" content="summary_large_image">
-
 </head>
 
 <body>
     <header>
-        <nav>
-            <img src="./assets/logo.svg" alt="logo do Portal Hyrax" width="50" height="50">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="./assets/logo.svg" alt="logo do Portal Hyrax" width="50" height="50">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section-1">Perfil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section-2">Vida</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section-formulario">Formulário</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section-memes">Memes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section-carrossel">Carrossel</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section-tabela">Tabela</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
-    <nav aria-label="Menu de seções do conteúdo" class="menu">
-        <a href="#section-1">Perfil</a>
-        <a href="#section-2">Vida</a>
-        <a href="#section-formulario">Formulário</a>
-        <a href="#section-memes">Memes</a>
-    </nav>
-
-    <div class="img-bg">
+    <div class="img-bg" style="margin-top: 70px;">
         <figure>
             <img src="assets/imgbg.webp" alt="Beautiful Rock Hyrax" height="500" width="100">
         </figure>
     </div>
 
-    <hr class="hr1">
-
     <main>
-
         <div class="container">
 
             <section class="section-1" id="section-1">
                 <h1>🐹🐾Perfil🐾🐹</h1>
-
                 <div class="introducao">
                     <h2>🧬 Introdução</h2>
                     <p>O Rock Hyrax (Procavia capensis), também conhecido como damão-das-rochas ou damão-do-cabo,
@@ -148,13 +157,8 @@
                                 loading="lazy">
                         </figure>
                     </div>
-
                 </div>
-
             </section>
-
-            <br>
-            <hr>
 
             <section class="section-2" id="section-2">
                 <h1>🌿🐾Vida🐾🌿</h1>
@@ -196,7 +200,6 @@
 
                 <hr>
                 <br>
-
             </section>
 
             <section id="section-formulario" class="section-formulario">
@@ -275,12 +278,76 @@
                 </div>
             </section>
 
+            <section class="section-carrossel" id="section-carrossel">
+                <h1>🎠 Carrossel de Imagens</h1>
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="assets/hyrax1.webp" class="d-block w-100" alt="Hyrax 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/hyrax2.webp" class="d-block w-100" alt="Hyrax 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/hyrax3.webp" class="d-block w-100" alt="Hyrax 3">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </section>
+
+            <section class="section-tabela" id="section-tabela">
+                <h1>📊 Tabela de Dados</h1>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Idade</th>
+                            <th scope="col">Espécie</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Hyrax 1</td>
+                            <td>3</td>
+                            <td>Procavia capensis</td>
+                        </tr>
+                        <tr>
+                            <td>Hyrax 2</td>
+                            <td>2</td>
+                            <td>Procavia capensis</td>
+                        </tr>
+                        <tr>
+                            <td>Hyrax 3</td>
+                            <td>4</td>
+                            <td>Procavia capensis</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="section-animacoes" id="section-animacoes">
+                <h1>✨ Animações CSS</h1>
+                <div class="animated-box" style="width: 100px; height: 100px; background-color: blue;"></div>
+            </section>
+
         </div>
     </main>
 
     <footer>
+
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
